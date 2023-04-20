@@ -9,20 +9,21 @@
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
+
     <div class="hero">
       <h1>highlights</h1>
-      <div id="focus">
-      </div>
+      <div id="focus"></div>
     </div>
+
     <script>
+      let focus = document.getElementById('focus');
+      let focusHalfWidth = focus.offsetWidth / 2;
 
-    let focus = document.getElementById("focus");
-    let focusHalfWidth = focus.offsetWidth/2;
-
-    document.onmousemove = function(e){
-      focus.style.left = e.pageX - focusHalfWidth + "px";
-      focus.style.top = e.pageY - focusHalfWidth + "px";
-    }
+      document.onmousemove = function (e) {
+        
+        focus.style.left = e.pageX - focusHalfWidth + 'px';
+        focus.style.top = e.pageY - focusHalfWidth + 'px';
+      };
     </script>
   </body>
 </html>
